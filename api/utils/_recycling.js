@@ -8,7 +8,7 @@ const isRecyclingWeek = ({ knownRecyclingDate, dateToCheck = new Date() }) => {
     throw new Error('knownRecyclingDate and dateToCheck must be valid dates')
 
   const DISTANCE = differenceInWeeks(DAY_TO_CHECK, KNOWN_RECYCLING_DATE)
-  return DISTANCE % 2 === 0 ? false : true
+  return DISTANCE % 2 === 0 ? true : false
 }
 
 export default isRecyclingWeek
